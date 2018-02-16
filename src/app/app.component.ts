@@ -14,7 +14,19 @@ export class AppComponent implements OnInit {
       localTitle: "Miss Clayton's Outstanding Teen",
       stateTitle: "Miss North Carolina's Outstanding Teen",
       introduction: 'intro text goes here',
-      socialMedia: [],
+      socialMedia: [
+        {
+          icon: 'fa fa-linkedin fa-2x',
+          link:
+            'https://www.linkedin.com/company/miss-capital-city-&-miss-clayton-scholarship-pageants---nc/',
+          color: '#0077B5'
+        },
+        {
+          icon: 'fa fa-facebook fa-2x',
+          link: 'https://www.facebook.com/MissClaytonsOutstandingTeen/',
+          color: '#0077B5'
+        }
+      ],
       titlelog: []
     };
   }

@@ -4,4 +4,10 @@
     <h2 class="subHeading">{{ timeline.subheading }}</h2>
     <img src="../assets/img/300x300.png" class="rounded-circle mx-auto d-block smallerImg" />
   </span>
+
+  <div class="row justify-content-center">
+    <a [href]="social.link" class="p-2" target="blank" *ngFor="let social of timeline.socialMedia">
+      <i [style.color] ="social.color" [class]="social.icon"></i>
+    </a>
+  </div>
 </div>
