@@ -11,3 +11,7 @@ body {
 .container {
     color: #CACACC;
 }
+
+.smallerImg {
+    width: 20%;
+}
