@@ -15,8 +15,7 @@ export class AppComponent implements OnInit {
       stateTitle: "Miss North Carolina's Outstading Teen",
       introduction: 'intro text goes here',
       socialMedia: [],
-      titlelog: [],
-      uodates: []
+      titlelog: []
     };
   }
 }
