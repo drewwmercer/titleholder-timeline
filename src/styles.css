@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: #23252D !important;
+}
+
 .subHeading {
     font-weight: 300;
+    color: white;
+}
+
+.container {
+    color: #CACACC;
 }
