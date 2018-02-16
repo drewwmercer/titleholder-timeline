@@ -11,8 +11,8 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.timeline = {
-      localTitle: "Miss Clayton's Outstading Teen",
-      stateTitle: "Miss North Carolina's Outstading Teen",
+      localTitle: "Miss Clayton's Outstanding Teen",
+      stateTitle: "Miss North Carolina's Outstanding Teen",
       introduction: 'intro text goes here',
       socialMedia: [],
       titlelog: []
