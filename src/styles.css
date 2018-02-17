@@ -19,3 +19,8 @@ body {
 i:hover {
     color: white !important;
 }
+
+.titleLogDetails {
+    font-weight: 300;
+    color: white;
+}
