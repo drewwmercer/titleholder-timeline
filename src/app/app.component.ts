@@ -8,6 +8,7 @@ import { Timeline } from '../models/timeline.interface';
 })
 export class AppComponent implements OnInit {
   public timeline: Timeline;
+  public logOpen: boolean = true;
 
   public ngOnInit(): void {
     this.timeline = {
@@ -27,7 +28,21 @@ export class AppComponent implements OnInit {
           color: '#0077B5'
         }
       ],
-      titlelog: []
+      titlelog: [
+        {
+          color: "#10A2F5",
+          year: 2016,
+          name: "a winner was crowned",
+          details: "win win win win"
+        }
+      ]
     };
+  }
+
+  public toggleOpen(valueToToggle: string): void{
+    switch(valueToToggle){
+      case 'logOpen':
+      this.logOpen = !this.logOpen;
+    }
   }
 }
