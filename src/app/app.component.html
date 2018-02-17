@@ -7,10 +7,33 @@
 
   <div class="row justify-content-center">
     <a [href]="social.link" class="p-2" target="blank" *ngFor="let social of timeline.socialMedia">
-      <i [style.color] ="social.color" [class]="social.icon"></i>
+      <i [style.color]="social.color" [class]="social.icon"></i>
     </a>
   </div>
+
   <div>
+    <h3>
+
+      <i (click)="toggleOpen('logOpen')" *ngIf="logOpen; else logExpanded" class="fa fa=plus"></i>
+      <ng-template #logExpanded>
+        <i (click)="toggleOpen('logOpen')" class="fa fa-minus"></i>
+      </ng-template>
+      Titlelog
+    </h3>
+    <div *ngIf="!logOpen">
+      <ul>
+        <li *ngFor="let change of timeline.titleLog" [ngStyle]="{'color': change.color}" (mouseEnter)="change.showDetails= true;" (mouseLeave)="change.showDetails= false;">
+          <div>{{titlelog.month + titlelog.year}}</div>
+          <div>{{titlelog.highlight}}</div>
+          <div *ngIf="change.showDetails">{{titlelog.details}}</div>
+        </li>
+
+        
+      </ul>
+    </div>
+</div>
+
+    <!-- <div>
     <h3>
       <i (click)="toggleOpen('logOpen')" *nfIf="logOpen; else logExpanded" class="fa fa=plus"></i> 
       <ng-template #logExpanded>
@@ -18,5 +41,15 @@
       </ng-template>
       Titlelog
     </h3>
+    <div *ngIf="!logOpen">
+      <ul>
+        <li *ngIf="let change of timeline.timeline">
+          <div>{{titlelog.month + titlelog.year}}</div>
+          <div>{{titlelog.highlight}}</div>
+        </li>>
+
+        </li>
+      </ul>
+    </div>
+  </div> -->
   </div>
-</div>
