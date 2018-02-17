@@ -15,3 +15,7 @@ body {
 .smallerImg {
     width: 20%;
 }
+
+i:hover {
+    color: white !important;
+}
