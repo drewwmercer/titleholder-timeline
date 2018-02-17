@@ -25,7 +25,7 @@
         <li *ngFor="let change of timeline.titleLog" [ngStyle]="{'color': change.color}" (mouseEnter)="change.showDetails= true;" (mouseLeave)="change.showDetails= false;">
           <div>{{titlelog.month + titlelog.year}}</div>
           <div>{{titlelog.highlight}}</div>
-          <div *ngIf="change.showDetails">{{titlelog.details}}</div>
+          <div *ngIf="change.showDetails" class="titleLogDetails">{{titlelog.details}}</div>
         </li>
 
         
