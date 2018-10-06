@@ -9,6 +9,7 @@ import { Timeline } from '../models/timeline.interface';
 export class AppComponent implements OnInit {
   public timeline: Timeline;
   public logOpen: boolean = true;
+  public updateOpen: boolean = true;
 
   public ngOnInit(): void {
     this.timeline = {

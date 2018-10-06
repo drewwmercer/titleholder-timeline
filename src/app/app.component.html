@@ -11,45 +11,81 @@
     </a>
   </div>
 
-  <div>
-    <h3>
+<div>
+<h3>
 
-      <i (click)="toggleOpen('logOpen')" *ngIf="logOpen; else logExpanded" class="fa fa=plus"></i>
-      <ng-template #logExpanded>
-        <i (click)="toggleOpen('logOpen')" class="fa fa-minus"></i>
-      </ng-template>
-      Titlelog
-    </h3>
-    <div *ngIf="!logOpen">
-      <ul>
-        <li *ngFor="let change of timeline.titleLog" [ngStyle]="{'color': change.color}" (mouseEnter)="change.showDetails= true;" (mouseLeave)="change.showDetails= false;">
-          <div>{{titlelog.month + titlelog.year}}</div>
-          <div>{{titlelog.highlight}}</div>
-          <div *ngIf="change.showDetails" class="titleLogDetails">{{titlelog.details}}</div>
-        </li>
+  <i (click)="toggleOpen('logOpen')" *ngIf="logOpen; else logExpanded" class="fa fa=plus"></i>
+  <ng-template #logExpanded>
+    <i (click)="toggleOpen('logOpen')" class="fa fa-minus"></i>
+  </ng-template>
+  Titlelog
+</h3>
 
-        
-      </ul>
-    </div>
+  <p class="description">I've been studying and working hard as a developer. Here are some of the hightlights.</p>
+<div>
+
+  <div *ngIf="!logOpen">
+    <ul>
+      <li *ngFor="let change of timeline.titleLog" [ngStyle]="{'color': change.color}" (mouseEnter)="change.showDetails= true;"
+        (mouseLeave)="change.showDetails= false;">
+        <div>{{titlelog.month + titlelog.year}}</div>
+        <div>{{titlelog.highlight}}</div>
+        <div *ngIf="change.showDetails" class="titleLogDetails">{{titlelog.details}}</div>
+      </li>
+
+    </ul>
+  </div>
 </div>
 
-    <!-- <div>
-    <h3>
-      <i (click)="toggleOpen('logOpen')" *nfIf="logOpen; else logExpanded" class="fa fa=plus"></i> 
-      <ng-template #logExpanded>
-        <i (click)="toggleOpen('logOpen')" class="fa fa-minus"></i>
-      </ng-template>
-      Titlelog
-    </h3>
-    <div *ngIf="!logOpen">
-      <ul>
-        <li *ngIf="let change of timeline.timeline">
-          <div>{{titlelog.month + titlelog.year}}</div>
-          <div>{{titlelog.highlight}}</div>
-        </li>>
+</div>
 
-        </li>
-      </ul>
-    </div>
-  </div> -->
+<div>
+  <h3>
+    <i class="fa fa-plus" *ngIf="updateOpen; else updateExpanded" (click)="toggleOpen('updateOpen')"></i>
+    <ng-template #updateExpanded>
+      <i class="fa fa-minus" (click)="toggleOpen('updateOpen')"></i>
+    </ng-template>
+    Updates/Releases
+  </h3>
+  <p class="description">Some news and collaborations I've been a part of.</p>
+  <div *ngIf="!updateOpen" [@fadeInOut]>
+    <ul>
+      <li class="liUpdates pt-3" *ngFor="let update of portfolio.updates">
+        <a [href]="update.link" class="updates" target="blank">{{update.description}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div>
+  <h3>
+    <i class="fa fa-plus" (click)="toggleOpen('bioOpen')" *ngIf="bioOpen; else bioExpanded"></i>
+    <ng-template #bioExpanded>
+      <i class="fa fa-minus" (click)="toggleOpen('bioOpen')"></i>
+    </ng-template>
+    Speaker Bio
+  </h3>
+  <p class="description">Just a little bit more info about me and what I've been up to.</p>
+  <div *ngIf="!bioOpen" class="speakerBio p-5 mb-5" [@fadeInOut]>
+    {{portfolio.speakerBio}}
+  </div>
+</div>
+
+</div>
+
+<!-- *********************************** -->
+
+
+
+
+
+
+  
+
+<div>
+  <h3>
+    <i class="fa fa-plus" *ngIf="updateOpen; else updateExpanded" (click)="toggleOpen(></i>
+  </h3>
+</div>
+ 
   </div>
